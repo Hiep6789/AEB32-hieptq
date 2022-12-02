@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            width: 600px;
+            text-align: center;
+            margin: auto;
+        }
+        .header {
+            height: 50px;
+            border: 1px solid;
+        }
+
+        .nav {
+            height: 50px;
+            border: 1px solid;
+            margin-top: 5px;
+        }
+
+        .content {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .content__left {
+            display: flex;
+            flex-direction: column;
+            
+            height: 200px;
+            flex: 0.6;
+            margin-right: 5px;
+        }
+
+        .content__left .section {
+            height: 100px;
+            border: 1px solid;
+        }
+
+        .content__left .article {   
+            margin-top: 5px;
+            height: 100px;
+            border: 1px solid;
+            
+        }
+
+        .content__right {
+            height: 200px;
+            flex: 0.4;
+            border: 1px solid;
+        }
+
+        .footer {
+            height: 50px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            header
+        </div>
+        <div class="nav">
+            nav
+        </div>
+        <div class="content">
+            <div class="content__left">
+                <div class="section">section</div>
+                <div class="article">article</div>
+            </div>
+            <div class="content__right">aside</div>
+        </div>
+        <div class="footer">
+            footer
+        </div>
+    </div>
+</body>
+
+</html>
