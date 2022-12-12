@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function bt1(){
+        //     let x = prompt('Mời nhập x: ');
+        //     x*=2;
+        //     alert('output = ' + x);
+        // }
+        // bt1();
+
+        // function bt2(){
+        //     let MIN = prompt('Nhập số thu nhat: ')
+        //     let b = prompt('Nhập số thu hai: ')
+        //     let c = prompt('Nhập số thu ba: ')
+        //     let d = prompt('Nhập số thu tu: ')
+        //     if (parseInt(b) < parseInt(MIN)) MIN = b
+        //     if (parseInt(c) < parseInt(MIN)) MIN = c
+        //     if (parseInt(d) < parseInt(MIN)) MIN = d
+        //     alert(MIN);
+        // }
+        // bt2();
+
+        // function bt3() {
+        //     let n = parseInt(prompt('Nhập vào số nguyên N: '));
+        //     n = (n-1)/2;
+        //     alert(parseInt(n));
+        // }
+        // bt3();
+
+        function bt4() {
+            let n = parseInt(prompt('Nhập vào số nguyên có 2 chữ số vào đây: '));
+            a = n % 10;
+            b = n / 10;
+            alert('số hàng chục là ' + parseInt(b));
+            alert('số hàng đơn vị là ' + parseInt(a));
+
+        }
+        // bt4();
+
+        function bt5() {
+            let n = parseInt(prompt('Nhập số n: '));
+            let snt = true;
+            
+            if (n < 2) {
+                snt = false;
+            }else {
+                for (let i = 2; i< n-1; i++){
+                if (n % i == 0){
+                snt = false;
+                break;
+            }
+            }
+            if (snt == true) {
+                alert ('Say yes!!');
+            }else {
+                alert ('Say no!!');
+            }
+            }
+        }
+        bt5();
+    </script>
+</body>
+</html>
