@@ -1,0 +1,54 @@
+*{margin: 0; padding: 0;}
+.container {
+    width: 800px;
+    height: 1000px;
+    margin: auto;
+    border: 1px solid;
+    
+    display: flex;
+    flex-direction: column;
+}
+.tren {
+    width: 100%;
+    
+    flex: 0.5;
+    position: relative;
+}
+.bg > img {
+    width: 800px;
+}
+.avatar {
+    width: 800px;
+    height: 130px;
+
+    position: absolute;
+    display: flex;
+    
+    bottom: 20px;
+}
+.anh > img {
+    width: 130px;
+    height: 130px;
+    margin: 0 20px 0 20px;
+    border-radius: 50%;
+}
+.info {
+    margin: 20px 0 20px 0;
+    padding-left: 20px;
+}
+.name {
+    color: azure;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.info p {
+    margin-top: 8px;
+    color: azure;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.duoi {
+    width: 100%;
+    flex: 0.5;
+    background-color: #0000006b;
+}

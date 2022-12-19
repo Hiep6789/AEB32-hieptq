@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // function bt1(){
@@ -47,24 +49,64 @@
         function bt5() {
             let n = parseInt(prompt('Nhập số n: '));
             let snt = true;
-            
+
             if (n < 2) {
                 snt = false;
-            }else {
-                for (let i = 2; i< n-1; i++){
-                if (n % i == 0){
-                snt = false;
-                break;
-            }
-            }
-            if (snt == true) {
-                alert ('Say yes!!');
-            }else {
-                alert ('Say no!!');
-            }
+            } else {
+                for (let i = 2; i < n - 1; i++) {
+                    if (n % i == 0) {
+                        snt = false;
+                        break;
+                    }
+                }
+                if (snt == true) {
+                    alert('Say yes!!');
+                } else {
+                    alert('Say no!!');
+                }
             }
         }
-        bt5();
+        // bt5();
+
+        function bt6() {
+            const num1 = prompt('Nhập số thứ nhất: ');
+            const num2 = prompt('Nhập số thứ hai: ');
+
+            for (let i = 1; i <= num1 && i <= num2; i++) {
+                if (num1 % i === 0 && num2 % i === 0) {
+                    UCLN = i;
+                }
+            }
+            alert('UCLN của ' + num1 + ' và ' + num2 + ' là ' + UCLN);
+        }
+        bt6();
+
+        function bt10() {
+            // do {
+            //     N = parseFloat(prompt(
+            //         "Số xăng bạn cần mua ?"))
+            //     if (N == Math.floor(N) && N > 0) {
+            //         break;
+            //     } else {
+            //         alert("Nhập lại:")
+            //     }
+            // } while (true);
+            let N = parseFloat(prompt("xang: "));
+            let a = parseFloat(prompt("1L bán với giá: "));
+            let b = parseFloat(prompt("2L bán với giá: "));
+            if (a < (b / 2)) {
+                money = a * N;
+            } else {
+                money = Math.floor(N / 2) * a + b;
+            }
+            document.write("Xăng cần mua: " + N + "</br>");
+            document.write("1 lít bán với giá: " + a + "</br>");
+            document.write("2 lít bán với giá: " + b + "</br>");
+            document.write("Số tiền ít nhất cần trả là: " + money);
+
+        }
+        // bt10();
     </script>
 </body>
+
 </html>
