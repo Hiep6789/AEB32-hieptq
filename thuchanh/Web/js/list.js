@@ -1,4 +1,4 @@
-const URL = "https://632878a09a053ff9aab8cf03.mockapi.io/api/v1/users";
+const URL = "https://63a06beb24d74f9fe837c53e.mockapi.io/api/v1/users";
 
 fetch(URL, {
   method: "GET",
@@ -24,6 +24,10 @@ function _renderUI(users) {
       <td>${user.name}</td>
       <td>${user.city}</td>
       <td>${user.avatar}</td>
+      <th>
+        <button class="btn btn-success onclick="gotoDetail(${user.id})">Detail</button>
+        <button class="btn btn-danger onclick="gotoDelete(${user.id})">Delete</button>
+      </th>
     </tr>
     `;
   }
@@ -40,4 +44,28 @@ function _renderUI(users) {
 function handleClickRow(userId) {
   console.log("handleClickRow", userId);
   window.location.href = `./detail.html?id=${userId}`;
+}
+// function gotoDetail(userId) {
+//   console.log(userId);
+// }
+// function gotoDelete(userId) {
+//   console.log(userId);
+// }
+
+
+function deleteUser(userId) {
+  console.log('deleteUser');
+  let user_Delete = URL + '/' + userId ;
+  fetch(user_Delete, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // console.log(data);
+      // dam bao users no co data
+      getListUser()
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 }
