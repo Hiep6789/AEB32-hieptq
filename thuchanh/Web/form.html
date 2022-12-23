@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aptech Express</title>
-  <link rel="stylesheet" href="./bootstrap-5.2.1-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/header.css">
-</head>
-
-<body>
-  <header class="bg__ccc p-3 rounded-3">
-    <iframe src="./header.html" frameborder="0" class="h__55px w-100 rounded-3"></iframe>
-
-  </header>
-  <form class="row g-3 w-50 m-auto my-3" onsubmit="return false">
-    <div class="col-md-6">
-      <label class="form-label">Name</label>
-      <input type="text" class="form-control" id="inputName" />
-    </div>
-    <div class="col-md-6">
-      <label class="form-label">City</label>
-      <input type="text" class="form-control" id="inputCity" />
-    </div>
-    <div class="col-12">
-      <label class="form-label">Avatar</label>
-      <input type="text" class="form-control" id="inputAvatar" placeholder="https://........" />
-    </div>
-    <!-- <div class="col-12">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptech Express</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.2.1-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+  </head>
+  <body>
+    <header class="bg__ccc p-3 rounded-3">
+      <iframe
+        src="./header.html"
+        frameborder="0"
+        class="h__55px w-100 rounded-3"
+      ></iframe>
+    </header>
+    <form class="row g-3 w-50 m-auto my-3" onsubmit="return false">
+      <div class="col-md-6">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputName" />
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity" />
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Avatar</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputAvatar"
+          placeholder="https://xxxxxx"
+        />
+      </div>
+      <button class="btn btn-success" onclick="handleSubit()">Submit</button>
+      <!-- <div class="col-12">
         <label for="inputAddress2" class="form-label">Address 2</label>
         <input
           type="text"
@@ -58,49 +68,18 @@
           <input class="form-check-input" type="checkbox" id="gridCheck" />
           <label class="form-check-label" for="gridCheck"> Check me out </label>
         </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" onclick="handleSignin()" >Sign in</button>
       </div> -->
-    <div class="col-12">
-      <button type="submit" class="btn btn-success" onclick="handleSubmit()">Enter</button>
-    </div>
-  </form>
-  <!-- <footer class="bg__ccc text-center fixed-bottom rounded-3">Footer</footer>  -->
-  <!-- config js bt -->
-  <script src="./bootstrap-5.2.1-dist/umd/popper.min.js"></script>
-  <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
-  <script src="./js/action/user.js"></script>
-  <script src="./js/form.js"></script>
-  <script>
-    function handleSubmit() {
-      let elmName = document.getElementById('inputName');
-      let elmCity = document.getElementById('inputCity');
-      let elmAvatar = document.getElementById('inputAvatar');
+    </form>
+    <footer class="bg__ccc text-center fixed-bottom rounded-3">Footer</footer>
+    <!-- config js bt -->
+    <script src="./bootstrap-5.2.1-dist/umd/popper.min.js"></script>
+    <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="./js/action/user.js"></script>
+    <script src="./js/form.js"></script>
 
-      let user = {
-        name: elmName.value,
-        city: elmCity.value,
-        avatar: elmAvatar.value,
-      };
-      console.log(user);
-      
-      let post_user = "https://63a06beb24d74f9fe837c53e.mockapi.io/api/v1/users";
-
-      fetch(post_user, {
-        method: "POST",
-        headers: {" Content-Type": "application/json"},
-        body: JSON.stringify(user),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          // console.log(data);
-          // dam bao users no co data
-          console.log(data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-
-    }
-  </script>
-</body>
-
+  </body>
 </html>
+
