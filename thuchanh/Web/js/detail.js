@@ -2,7 +2,7 @@ let urlDetail = new URLSearchParams(window.location.search);
 let id = urlDetail.get("id");
 console.log(id);
 
-const URL = "https://632878a09a053ff9aab8cf03.mockapi.io/api/v1/users/" + id;
+const URL = "https://63a06beb24d74f9fe837c53e.mockapi.io/api/v1/users/" + id;
 
 fetch(URL, {
   method: "GET",
