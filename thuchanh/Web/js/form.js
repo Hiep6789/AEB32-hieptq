@@ -4,7 +4,7 @@ let urlDetail = new URLSearchParams(window.location.search);
 let id = urlDetail.get("id");
 
 if (id) {
-  getUser()
+  getUser();
 }
 
 function getUser() {
@@ -37,15 +37,14 @@ function handleSubit() {
     avatar: elmAvatar.value,
   };
   if (id) {
-    updateUser(user)
-  }else{
+    updateUser(user);
+  } else {
     postUser(user);
   }
- 
 }
 
 function postUser(user) {
-  console.log('postUser');
+  console.log("postUser");
   fetch(URL_USER, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
