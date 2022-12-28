@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: auto;
+}
+.container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-around
+    /* margin: auto; */
+    /* height: 300px; */
+}
+.div__card {
+    width: 400px;
+    height: 260px;
+    display: flex;
+    justify-content:space-around;
+    border: 2px solid rgba(0, 0, 0, 0.87);
+    border-radius: 3%;
+}
+.div__image {
+    flex: 0.5;
+    padding: 5px 0;
+    
+}
+.div__image img {
+    width: 160px;
+    margin-left: 6px;
+}
+.div__info {
+    flex: 0.5;
+    padding: 20px 20px;
+}
+.div__info>h3 {
+    font-size: 20px;
+}
+.div__info>p {
+    color: rgb(158, 149, 149);
+    margin-bottom: 10px;
+}
