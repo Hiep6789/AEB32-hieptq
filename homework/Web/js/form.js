@@ -22,8 +22,8 @@ function getUser() {
       elmTensach.value = data.tensach;
       elmTheloai.value = data.theloai;
       elmNxb.value = data.nxb;
-      elmTacgia = data.tacgia;
-      elmNamphathanh = data.namphathanh;
+      elmTacgia.value = data.tacgia;
+      elmNamphathanh.value = data.namphathanh;
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -44,6 +44,7 @@ function handleSubmit() {
     tacgia: elmTacgia.value,
     namphathanh: elmNamphathanh.value,
   };
+  
   if (id) {
     updateUser(user);
   } else {
