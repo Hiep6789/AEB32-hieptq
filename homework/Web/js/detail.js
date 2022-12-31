@@ -18,11 +18,24 @@ fetch(URL, {
 function _renderInfoUser(user) {
   let elm = document.getElementById("info__user");
   elm.innerHTML = `
-        <p>${user.id}</p>
-        <p>${user.tensach}</p>
-        <p>${user.theloai}</p>
-        <p>${user.nxb}</p>
-        <p>${user.tacgia}</p>    
-        <p>${user.namphathanh}</p>    
+                <h1 class="form-heading">Detail page</h1>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="${"id: "+ user.id}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="${"Tên sách: "+ user.tensach}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="${"Thể loại: "+ user.theloai}" >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="${"Nhà xuất bản: "+ user.nxb}" >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="${"Tác giả: "+ user.tacgia}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="${"Năm phát hành: "+ user.namphathanh}">
+                </div>   
     `;
 }
